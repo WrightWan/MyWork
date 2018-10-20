@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clin:Clinic xmlns:clin="http://www.example.org/schemas/clinic"
+             xmlns:pat="http://www.example.org/schemas/clinic/patient"
+             xmlns:tre="http://www.example.org/schemas/clinic/treatment"
+             xmlns:prov="http://www.example.org/schemas/clinic/provider">
+  <!--Zero or more repetitions:-->
+  <pat:Patient>
+    <pat:patient-id>10</pat:patient-id>
+    <pat:name>string</pat:name>
+    <pat:dob>2008-09-29</pat:dob>
+    <pat:treatments>
+      <!--Zero or more repetitions:-->
+      <pat:treatment tre:type="DrugTreatmentType">
+        <tre:provider-id>10</tre:provider-id>
+        <tre:diagnosis>string</tre:diagnosis>
+        <tre:name>Aspirin</tre:name>
+        <tre:dosage>1.5E2</tre:dosage>
+      </pat:treatment>
+      <pat:treatment tre:type="RadiologyType">
+        <tre:provider-id>10</tre:provider-id>
+        <tre:diagnosis>string</tre:diagnosis>
+        <tre:date>2007-12-15</tre:date>
+        <tre:date>2008-04-15</tre:date>
+      </pat:treatment>
+      <pat:treatment tre:type="SurgeryType">
+        <tre:provider-id>10</tre:provider-id>
+        <tre:diagnosis>string</tre:diagnosis>
+        <tre:date>2007-12-18</tre:date>
+      </pat:treatment>
+    </pat:treatments>
+  </pat:Patient>
+  <!--Zero or more repetitions:-->
+  <prov:Provider>
+    <prov:provider-id>10</prov:provider-id>
+    <prov:name>string</prov:name>
+    <prov:specialization>Radiology</prov:specialization>
+  </prov:Provider>
+</clin:Clinic>
